@@ -17,11 +17,12 @@ if __name__ == '__main__':
     automat.opstart()
     while aktiv:
         print(generer_bruger_info())
-
+        print('Antal pantgenstande afleveret: '+str(len(generer_bruger_info())))
+        print('Pant til udbetaling: '+str(automat.beregn_session_total()))
         # Simuleret pantindkast/udbetal-tryk
         handling = input('Indkast pant eller udbetal. ')
 
-        if handling == '':
+        if handling == 'udbetal':
             print(generer_kvittering_tekst())
             automat.udbetal()
 
