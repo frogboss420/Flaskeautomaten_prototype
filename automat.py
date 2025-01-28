@@ -59,3 +59,5 @@ def udbetal():
     til_udbetaling = beregn_session_total()
     session.clear()
     return til_udbetaling
+
+#def beregn_takst():
